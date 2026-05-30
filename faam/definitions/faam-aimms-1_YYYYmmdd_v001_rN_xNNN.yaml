@@ -1,0 +1,264 @@
+meta:
+  file_pattern: faam-aimms-1_{date}_v001_r{revision}_{flight_number}.nc
+  short_name: faam-aimms-1
+  long_name: Dynamics data from the FAAM AIMMS-1 Air Data Probe
+  description: >-
+    Data from the AIMMS-1 air data probe 
+  references:
+    - title: 'FAAM WxRx Processing documentation'
+      web: 'https://faam.ac.uk/sphinx/rdr4b_wxrx/'
+      doi: '10.5281/zenodo.7944511'
+attributes:
+  comment: '<str: derived_from_file>'
+  creator_url: 'https://www.faam.ac.uk'
+  instrument: faam-aimms-1
+  instrument_description: 'FAAM AIMMS-1 Air Data Probe'
+  instrument_manufacturer: Aventech Research Inc.
+  instrument_model: AIMMS-20
+  instrument_serial_number: '<str: derived_from_file>'
+  processing_software_doi: '<str: derived_from_file>' 
+  processing_software_url: 'https://github.com/FAAM-146/faam-wxrx'
+  processing_software_version: '<str: derived_from_file>'
+  project_acronym: '<str: derived_from_file>'
+  project_name: '<str: derived_from_file>'
+  project_principal_investigator: '<str: derived_from_file>'
+  project_principal_investigator_email: '<str: derived_from_file>'
+  project_principal_investigator_url: '<str: derived_from_file>'
+dimensions:
+  - name: time
+    size:
+  - name: bins
+    size: 512
+variables:
+  - meta:
+      name: time
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999
+      long_name: Time of of measurement on idealised timebase
+      units: seconds since 1970-01-01 00:00:00
+      calendar: gregorian
+      coverage_content_type: coordinate
+      frequency: 0
+  - meta:
+      name: raw_time
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999
+      long_name: Time of measurement reported by instrument
+      units: seconds since 1970-01-01 00:00:00
+      calendar: gregorian
+      coverage_content_type: coordinate
+      frequency: 0
+  - meta:
+      name: latitude
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Latitude reported by instrument
+      valid_min: -90.
+      valid_max: 90.
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      standard_name: latitude
+      units: 'degree_north'
+  - meta:
+      name: longitude
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Longitude reported by instrument
+      valid_min: -180.
+      valid_max: 180.
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      standard_name: longitude
+      units: 'degree_east'
+  - meta:
+      name: altitude
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: GPS Altitude reported by instrument
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      standard_name: altitude
+      units: 'm'
+  - meta:
+      name: air_temperature
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Air Temperature from AIMMS-20 probe
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      standard_name: air_temperature
+      units: 'K'
+  - meta:
+      name: relative_humidity
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Relative Humidity from AIMMS-20 probe
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      standard_name: relative_humidity
+      units: '%'
+  - meta:
+      name: static_pressure
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Static Pressure from AIMMS-20 probe
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      standard_name: barometric_pressure
+      units: 'hPa'
+  - meta:
+      name: u_wind
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Eastward Wind Component from AIMMS-20 probe
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      standard_name: eastward_wind
+      units: 'm s-1'
+  - meta:
+      name: v_wind
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Northward Wind Component from AIMMS-20 probe
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      standard_name: northward_wind
+      units: 'm s-1'
+  - meta:
+      name: w_wind
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Vertical Wind Component from AIMMS-20 probe
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      standard_name: vertical_wind
+      units: 'm s-1'
+  - meta:
+      name: velocity_north
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Northward Velocity from AIMMS-20 probe
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      standard_name: northward_velocity
+      units: 'm s-1'
+  - meta:
+      name: velocity_east
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Eastward Velocity from AIMMS-20 probe
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      standard_name: eastward_velocity
+      units: 'm s-1'
+  - meta:
+      name: velocity_up
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Upward Velocity from AIMMS-20 probe
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      standard_name: upward_velocity
+      units: 'm s-1'
+  - meta:
+      name: heading
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Heading Angle from AIMMS-20 probe
+      standard_name: platform_yaw_angle
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      units: 'degrees'
+  - meta:
+      name: pitch
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Pitch Angle from AIMMS-20 probe
+      standard_name: platform_pitch_angle
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      units: 'degrees'
+  - meta:
+      name: roll
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Roll Angle from AIMMS-20 probe
+      standard_name: platform_roll_angle
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      units: 'degrees'
+  - meta:
+      name: angle_of_attack
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Angle of Attack from AIMMS-20 probe
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      units: 'degrees'
+  - meta:
+      name: angle_of_sideslip
+      datatype: <float32>
+    dimensions:
+      - time
+    attributes:
+      _FillValue: -9999.
+      long_name: Angle of Sideslip from AIMMS-20 probe
+      coverage_content_type: physicalMeasurement
+      frequency: 0
+      units: 'degrees'
+
+  

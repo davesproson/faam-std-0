@@ -1,0 +1,6 @@
+conventions:
+  name: FAAM
+  major: 0
+  minor: 6
+layout:
+  project_directory: faam
